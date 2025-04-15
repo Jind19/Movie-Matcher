@@ -87,7 +87,10 @@ public class MovieMatcher {
         }
 
         //Move right to find other matches
-        while(right < movies.length && movies[right].rating == userMovieRating){
+        //while(right < movies.length && movies[right].rating == userMovieRating) //this one for exact match
+        //now we modified to get all the movies with rating equal or above the user input rating
+
+        while(right < movies.length && movies[right].rating >= userMovieRating){
             result.add(movies[right]);
             right++;
         }
